@@ -1,0 +1,3 @@
+module Clusterable
+  # Your code goes here...
+end
