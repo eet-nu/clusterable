@@ -1,7 +1,7 @@
 module Clusterable
   class Cluster
     attr_accessor :points, :center
-
+    
     def initialize(points = [], center = nil)
       raise "can't initialize an empty cluster" unless points.size > 0
       self.points = points

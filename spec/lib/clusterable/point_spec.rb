@@ -3,10 +3,10 @@ require 'spec_helper'
 describe Clusterable::Point do
   describe 'instance methods' do
     let(:marker) { Clusterable::Point.new(50.9985319, 5.8573735) }
-          
+    
     describe '#initialize' do
       let(:marker) { Clusterable::Point.new('latitude', 'longitude') }
-
+      
       it 'sets the latitude' do
         marker[:latitude].should eql('latitude')
       end

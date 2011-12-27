@@ -3,9 +3,9 @@ require 'spec_helper'
 describe Clusterable::Cluster do
   def random_point(lat = nil, lng = nil)
     Clusterable::Point.new(lat || 50.9985319,
-                           lng ||  5.8573735)    
+                           lng ||  5.8573735)
   end
-
+  
   describe 'instance methods' do
     describe '#initialize' do
       it 'returns a cluster' do
@@ -21,10 +21,9 @@ describe Clusterable::Cluster do
       it 'sets the points attribute' do
         points  = [random_point]
         cluster = Clusterable::Cluster.new(points)
-
+        
         cluster.points.should eql(points)
       end
-      
       
       it 'accepts an optional center point' do
         lambda {
@@ -55,14 +54,14 @@ describe Clusterable::Cluster do
       it 'overwrites the points attribute' do
         points = [target]
         cluster.update(points)
-
+        
         cluster.points.should eql(points)
       end
       
       it 'recalculates the center point' do
         points = [random_point(50, 5)]
         cluster.update(points)
-
+        
         cluster.center.latitude.should  eql(50.0)
         cluster.center.longitude.should eql(5.0)
       end
