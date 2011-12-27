@@ -1,9 +1,4 @@
 module Clusterable
+  autoload :Point,   'clusterable/point'
+  autoload :Cluster, 'clusterable/cluster'
 end
-
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-
-require 'clusterable/point'
-require 'clusterable/cluster'
-
-$LOAD_PATH.shift
