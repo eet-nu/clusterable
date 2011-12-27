@@ -1,23 +1,17 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path("../lib/clusterable", __FILE__)
+require File.expand_path('../lib/clusterable', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "clusterable"
+  s.name        = 'clusterable'
   s.version     = Clusterable::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = []
-  s.email       = []
-  s.homepage    = "http://rubygems.org/gems/clusterable"
-  s.summary     = "TODO: Write a gem summary"
-  s.description = "TODO: Write a gem description"
+  s.authors     = ['Tom-Eric Gerritsen']
+  s.email       = ['tomeric@eet.nu']
+  s.homepage    = 'http://github.com/eet-nu/clusterable'
+  s.summary     = 'Create clusters of points.'
+  s.description = 'Create clusters of points.'
   
-  s.required_rubygems_version = ">= 1.3.6"
-  s.rubyforge_project         = "clusterable"
-  
-  s.add_development_dependency "bundler", ">= 1.0.0"
-  s.add_development_dependency "rspec", ">= 2.0.0"
-  
-  s.files        = `git ls-files`.split("\n")
-  s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
+  s.files        = Dir["{benchmark,lib,spec}/**/*"] + ["LICENSE", "Rakefile", "Gemfile", "README.md"]
+  s.executables  = Dir["bin/*"]
   s.require_path = 'lib'
 end
